@@ -1,1 +1,1 @@
-# Question 14: [Brief Description]
+14. Explain and implement React.memo in a component to optimize performance.

@@ -1,1 +1,1 @@
-# Question 9: [Brief Description]
+9. Create a search bar that filters a list of items as the user types.

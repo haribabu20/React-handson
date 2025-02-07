@@ -1,1 +1,1 @@
-# Question 2: [Brief Description]
+2. Implement a counter component with increment, decrement, and reset buttons using the useState hook.

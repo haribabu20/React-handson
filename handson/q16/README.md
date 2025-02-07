@@ -1,1 +1,1 @@
-# Question 16: [Brief Description]
+16. Create a simple counter application using Redux. Include increment and decrement actions.

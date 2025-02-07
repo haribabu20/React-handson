@@ -1,1 +1,1 @@
-# Question 4: [Brief Description]
+4. Demonstrate the difference between state and props with a practical example.

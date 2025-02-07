@@ -1,1 +1,1 @@
-# Question 10: [Brief Description]
+10. Implement a button click event that toggles the visibility of a div.

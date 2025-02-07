@@ -1,1 +1,1 @@
-# Question 24: [Brief Description]
+24. Style a component using CSS Modules or Styled Components.
