@@ -2,18 +2,21 @@ import {useState} from 'react'
 import Child from './Child'
 const Parent = () => {
 
-  const [message, setMessage] = useState('update in parent')
+  const [username, setUsername] = useState('')
 
-
-  const updateMessage = () => {
-    setMessage("update in child")
+  const updateUsername = (name) => {
+    setUsername(name)
   }
 
   return(
     <div>
-      <h1>Parent Component</h1>
-      <p>{message}</p>
-      <Child message={message} updateMessage={updateMessage}/>
+      {username && (
+        <div>
+          <h1>Parent Component</h1>
+          <p>{username}</p>
+        </div>
+      )}
+      <Child username={username} updateUsername={updateUsername}/>
     </div>
   )
 }

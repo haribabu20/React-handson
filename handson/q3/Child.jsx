@@ -1,12 +1,19 @@
 import { useState } from "react";
 
-const Child = ({message, updateMessage}) => {
+const Child = ({username, updateUsername}) => {
+
+  const [name, setName] = useState('')
 
   return(
     <div>
       <h1>Child Component</h1>
-      <p>{message}</p>
-      <button onClick={updateMessage}>Update</button>
+      <input
+        type = "text"
+        onChange = {(e)=>setName(e.target.value)}
+      />
+      <button onClick={()=>updateUsername(name)}>login</button>
+      {/* <p>{username}</p> */}
+
     </div>
   )
 
