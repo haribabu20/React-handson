@@ -4,6 +4,8 @@ import Parent from '../handson/q3/Parent'
 import Item from '../handson/q5/Item'
 import FormValidation from '../handson/q6/FormValidation'
 import RoleBasedComponent from '../handson/q7/RoleBasedComponent'
+import AuthButton from '../handson/q8/AuthButton'
+
 import './App.css'
 
 function App() {
@@ -14,7 +16,8 @@ function App() {
       {/* <Parent/> */}
       {/* <Item/> */}
       {/* <FormValidation/> */}
-      <RoleBasedComponent/>
+      {/* <RoleBasedComponent/> */}
+      <AuthButton/>
     </>
   )
 }
