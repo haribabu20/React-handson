@@ -3,6 +3,7 @@ import CounterUseState from "../handson/q2/CounterUseState";
 import Parent from '../handson/q3/Parent'
 import Item from '../handson/q5/Item'
 import FormValidation from '../handson/q6/FormValidation'
+import RoleBasedComponent from '../handson/q7/RoleBasedComponent'
 import './App.css'
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       {/* <CounterUseState/> */}
       {/* <Parent/> */}
       {/* <Item/> */}
-      <FormValidation/>
+      {/* <FormValidation/> */}
+      <RoleBasedComponent/>
     </>
   )
 }
