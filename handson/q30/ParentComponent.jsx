@@ -10,14 +10,23 @@ const ParentComponent = () => {
   const [salary, setSalary] = useState(23000)
 
   const handleAge = useCallback(() => {
-    setAge(age+1)
-  },[age])
+    setAge((prevAge)=>prevAge+1)
+  },[])
 
   const handleSalary = useCallback(() => {
-    setSalary(salary+1000)
-  },[salary])
-  
+    setSalary((prevSalary)=>prevSalary+1000)
+  },[])
 
+// if we give age in dependency, then for salary change, this button will be rendered. 
+  // const handleAge = useCallback(() => {
+  //   setAge(age+1)
+  // },[age])
+
+// if we give salary in dependency, then for salary change, this button will be rendered. 
+  // const handleSalary = useCallback(() => {
+  //   setSalary(salary+1000)
+  // },[salary])
+  
   return (
     <div>
       <Title clr="red"/>
