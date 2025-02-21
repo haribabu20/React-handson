@@ -7,6 +7,7 @@ import RoleBasedComponent from '../handson/q7/RoleBasedComponent'
 import AuthButton from '../handson/q8/AuthButton'
 import SearchBar from '../handson/q9/SearchBar'
 import ToggleDiv from '../handson/q10/ToggleDiv'
+import ParentComponent from '../handson/q30/ParentComponent'
 
 import './App.css'
 
@@ -21,7 +22,8 @@ function App() {
       {/* <RoleBasedComponent/> */}
       {/* <AuthButton/> */}
       {/* <SearchBar/> */}
-      <ToggleDiv/>
+      {/* <ToggleDiv/> */}
+      <ParentComponent/>
     </>
   )
 }
