@@ -14,7 +14,7 @@ import ErrorBoundary from '../handson/ClassBased/ErrorBoundary'
 import HocConcept from "../handson/ClassBased/HocConcept";
 import './App.css'
 import RoutesDetail from '../handson/Routes/RoutesDetail'
-import MainPage from '../handson/Routes/PageComponents/MainPage'
+import MainPage from '../handson/Routes/MainPage'
 
 const EnhancedParent = HocConcept(ParentClass);
 

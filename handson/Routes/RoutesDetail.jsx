@@ -12,9 +12,12 @@ import New from './PageComponents/New'
 import User from './PageComponents/User'
 import UserDetails from './PageComponents/UserDetails'
 import Admin from './PageComponents/Admin'
+import Login from './PageComponents/Login'
+import Profile from './PageComponents/Profile'
 // lazyLoading
 const EnhancedAbout = lazy(()=> import('./PageComponents/About'))
 const EnhancedAdmin = lazy(()=> import('./PageComponents/Admin'))
+const EnhancedLogin = lazy(()=> import('./PageComponents/Login'))
 
 
 
@@ -43,6 +46,13 @@ const RouteDetail = () => {
             </Suspense>
           }/>
         </Route>
+        <Route path='/login' element={
+          <Suspense fallback='Loading...'>
+            <EnhancedLogin/>
+          </Suspense>
+        }>
+        </Route>
+        <Route path='/profile' element={<Profile/>}></Route>
         <Route path='*' element={<NoMatch/>}/>
       </Routes>
     </>
