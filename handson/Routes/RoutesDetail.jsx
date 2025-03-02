@@ -13,11 +13,14 @@ import User from './PageComponents/User'
 import UserDetails from './PageComponents/UserDetails'
 import Admin from './PageComponents/Admin'
 import Login from './PageComponents/Login'
-import Profile from './PageComponents/Profile'
+// import Profile from './PageComponents/Profile'
+import ReqdComponent from './Authentication/ReqdComponent'
+
 // lazyLoading
 const EnhancedAbout = lazy(()=> import('./PageComponents/About'))
 const EnhancedAdmin = lazy(()=> import('./PageComponents/Admin'))
 const EnhancedLogin = lazy(()=> import('./PageComponents/Login'))
+const LazyProfile = lazy(()=>import('./PageComponents/Profile'))
 
 
 
@@ -26,18 +29,27 @@ const RouteDetail = () => {
     <>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
+        <Route path="/order-summary" element={<OrderSummary/>}/>
+        <Route path='*' element={<NoMatch/>}/>
+
+        {/* lazy loading route */}
         <Route path="/about" element={
             <Suspense fallback='Loading...'>
               <EnhancedAbout/>
             </Suspense>
           }>
         </Route>
-        <Route path="/order-summary" element={<OrderSummary/>}/>
+
+
+        {/* Nested route */}
         <Route path="/products" element={<Products/>}>
           <Route index element={<Featured/>} />
           <Route path="featured" element={<Featured/>}/>
           <Route path="new" element={<New/>}/>
         </Route>
+
+
+        {/* Nested route with lazy routing */}
         <Route path="/users" element={<User/>}>
           <Route path=":userid" element={<UserDetails/>}/>
           <Route path='admin' element={
@@ -46,14 +58,26 @@ const RouteDetail = () => {
             </Suspense>
           }/>
         </Route>
+
+
+        {/* lazy loading route */}
         <Route path='/login' element={
           <Suspense fallback='Loading...'>
             <EnhancedLogin/>
           </Suspense>
         }>
         </Route>
-        <Route path='/profile' element={<Profile/>}></Route>
-        <Route path='*' element={<NoMatch/>}/>
+        
+        {/* protected route with lazy loading */}
+          <Route path='/profile' element={
+            <ReqdComponent>
+                <Suspense fallback="Loading...">
+                  <LazyProfile/>
+                </Suspense>
+            </ReqdComponent>
+          }></Route>
+        
+    
       </Routes>
     </>
 
