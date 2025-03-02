@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleSubmit = () => {
     auth.login(user)
-    navigate('/profile')
+    navigate('/profile', {replace: true, state: {username: user}})
   }
 
   return(
